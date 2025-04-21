@@ -1,33 +1,68 @@
-# phishing
-FOR Phishing(Without PHP)
-__________________________
-Phishing is an attempt to display onself as an authentic source in order to steal the credentials of the victim.
+# 🎣 Phishing Simulation Project
 
-Phising attacks are common and it is not possible to distinguish the original site from the disguised one.
+> **Disclaimer:** This project is for educational and ethical penetration testing purposes **only**. Do **not** use this for unauthorized or malicious activities. The author assumes no responsibility for any misuse.
 
-The only way you have is by looking at the URL.
+---
 
-I have Used Node.js, with express as a framework.
-This code runs locally on your machine on port 3000.
+## 📌 About the Project
 
-It creates a file called logs.json that stores all the credentials of the users who attempt to register.
+**Phishing** is a simulation of how attackers can disguise malicious websites as legitimate ones to collect sensitive credentials from unsuspecting users. This project showcases two different phishing setups:
 
-If you wish to replicate this, you need to have node.js installed.
+1. **Without PHP (Node.js-based)** – A local simulation for ethical demonstration and learning.
+2. **With PHP** – An online deployable version for educational experiments on phishing behavior.
 
-You need to install express,ejs and body-parser as well.
+---
 
-Node.js can be downloaded from thier official site https://nodejs.org/en/download/
+## 🛠️ Technologies Used
 
-To install express, ejs and body-parser :npm install express,ejs,body-parser
+### 🔹 Node.js Version (Without PHP)
+- **Node.js**
+- **Express.js**
+- **EJS** (Templating Engine)
+- **Body-Parser**
 
-FOR Phishing(Using PHP)
-________________________
-This can be hosted on a platform such as https://in.000webhost.com/ for free.
+### 🔹 PHP Version
+- Pure HTML + PHP for basic credential capture simulation.
 
-Unlike the former one, this can have serious consequenses as this will be available online.So, don't use it for your advantage.
+---
 
-Like the previous one, I have customized the login page, but one can add the contents as per one's choice.
+## 🚀 Getting Started
 
-One has to just right click on the page and click on "View Page source" and copy the source code to phishing.html
+### 🧩 Prerequisites
 
-NOTE: One has to change the "action" attribute to "login_details.php".
+#### For Node.js Version:
+- Node.js installed on your machine: [Download Node.js](https://nodejs.org/en/download/)
+- Required packages: Express, EJS, Body-parser
+
+### 🔧 Installation & Run (Node.js Version)
+
+
+git clone https://github.com/SusmoyNath/CyberSecurity-Phishing.git
+cd CyberSecurity-Phishing
+npm install express ejs body-parser
+node app.js
+
+
+- The server will run at `http://localhost:3000/`
+- Credentials submitted on the form are saved to `logs.json`
+
+### 🌐 Deployment (PHP Version)
+
+1. Host the files on a free hosting service like [000Webhost](https://in.000webhost.com/).
+2. Create the following files:
+   - `phishing.html` – Your fake login form (customized)
+   - `login_details.php` – Script to capture and store credentials
+
+3. In your HTML, **ensure the `<form>` action points to**:
+   
+<form action="login_details.php" method="POST">
+
+
+4. Customize the HTML as desired. You can copy source code of real login pages via:
+   - Right-click → View Page Source → Copy → Modify for phishing.html
+
+---
+
+## ⚠️ Warning & Legal Notice
+
+This project is **strictly for educational purposes**. Hosting or using phishing pages to collect real user data without consent is illegal and unethical. Always practice responsible coding and penetration testing. Make sure to comply with all local laws and regulations.
